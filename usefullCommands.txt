@@ -1,0 +1,76 @@
+docker info
+
+docker version
+
+docker # lists all available commands
+
+docker container run --publish 80:80 nginx
+
+docker run --name mongo -d mongo
+
+docker run / stop CONTAINER 
+
+ps aux | grep SEARCH KEY
+
+
+sudo kill $(sudo lsof -t -i:3000) 
+#to kill any process running on any port
+
+docker container run -p 8080:80 -d -e MYSQL_RANDOM_ROOT_PASSWORD=yes --name db mysql
+
+ls -al
+#list all action made
+
+
+docker container run -it CONTAINER 
+#run container with opening interactive terminal
+
+docker container exec -it CONTAINER COMMAND
+#rerun existing container
+
+docker container start -ai ubuntu
+# rerun existing container 
+
+docker image ls
+#list container info
+
+docker pull
+#get image
+
+docker container run -it alpine sh
+#run alpine(linux small security-focused distro)
+
+docker container port CONTAINER
+#gives assigned port info
+
+docker container inspect --format '{{ .NetworkSettings.IPAddress }}' webhost
+#gets ip address
+
+docker container network ls
+#list all created network
+
+docker container inspect / top / stats CONTAINER NAME  
+
+docker network inspect NETWORK NAME
+#get detail and list of connected containers in network
+
+docker network create NAME
+#create network
+
+docker container run -d --name new_nginx --network my_app_net nginx
+#create container with spesifying network to run in
+
+docker network connect NETWORK ContainerNAME
+#connect existing net and container
+
+docker network disconnect NETWORK ContainerNAME
+#DISconnect existing net and container
+
+
+docker container run -d --net my_net --net-alias search elasticsearch:2
+
+docker container run --rm --net my_net alpine nslookup search
+
+docker container run --rm --net my_net centos curl -s search:9200
+
+setting up github
