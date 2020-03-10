@@ -1,0 +1,20 @@
+#What is An Image:
+
+#App binaries and dependencies
+#Metadata about the image data and how to run the image
+
+#Images are tagged
+
+#hub.docker.com - apt package system for Containers
+
+docker pull IMAGENAME
+
+docker image ls
+
+docker history IMAGENAME:version
+
+docker image inspect IMAGENAME 
+#gives JSON Metadata about image
+
+#images are made up of file system changes and metadata and 
+#each layer stored once in filesystem
