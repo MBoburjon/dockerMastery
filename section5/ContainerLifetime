@@ -1,0 +1,30 @@
+# Container Lifetime & Persistent Data
+
+# Key Concepts with containers: immutable, ephemeral
+
+# Learning and using Data volumes
+
+# Learning and using Bind Mounts
+
+ 
+# Persistent Data Data volumes
+
+
+VOLUME 
+
+docker container run -d --name db -e MYSQL_ALLOW_EMPTY_PASSWORD=True mysql
+
+docker container run -d --name db3 -e MYSQL_ALLOW_EMPTY_PASSWORD=True 
+    -v mysql-db:/var/lib/mysql  mysql
+
+# -v gives you option to add CustomName for volume folder
+# and also gives use option to reuse that dir for new container
+# /var/lib/mysql is offical path of mysql image
+
+docker volume create 
+# you can create custom volume dir before RUN command
+
+
+
+
+
