@@ -18,3 +18,26 @@ docker image inspect IMAGENAME
 
 #images are made up of file system changes and metadata and 
 #each layer stored once in filesystem
+
+docker image tag nginx bretfisher/nginx
+#adding tag an existing image
+
+cat .docker/config.json
+#gives docker login AUTH
+
+docker image push IMAGE_NAME
+#to upload docker image into hub.docker.com AFTER LOGIN in
+
+vim Dockerfile
+# getting file info
+
+ll
+# listing Dockerfiles
+
+docker image build -t customnginx .
+# building docker image from Dockerfile
+
+docker image build -t nginx-with-html .
+
+docker build -t IMAGENAME DIRforBuildImage
+# command to build image or convert Dockerfile to image with name 
