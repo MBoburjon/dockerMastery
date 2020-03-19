@@ -1,0 +1,28 @@
+# Configure relationships between containers
+# save our docker container run settings in easy-to-read file
+# Create one-liner developer environment startups
+
+# Docker Compose 2 parts:
+    # YAML : containers, networks, volumes
+    # A CLI tool docker-compose - used for local dev/test automation
+
+docker-compose up
+# setup volumes/networks and start all containers
+
+docker-compose down
+# stop all containers and remove cont/vol/net
+
+# as we name 'Dockerfile' in docker, compose file should be
+    'docker-compose.yml'
+
+docker compose down -v
+# not only stops all working files but also clears the volume created
+
+# Build custom images 
+
+docker-compose build
+# build images if they are in cache
+
+docker-commpose down -rmi local
+# stop and also remove all images used
+
